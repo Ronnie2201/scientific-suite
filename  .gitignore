@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# User data (don't commit personal data)
+workspace/*
+!workspace/.gitkeep
+exports/
+sessions/
+temp/
+
+# Generated files
+*.png
+*.pdf
+*.svg
+*.csv
+*.xlsx
+*.npy
+*.pkl
+*.json
+!requirements.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# Env
+.env
+.env.local

@@ -1,0 +1,26 @@
+# Core scientific stack
+numpy>=1.24.0
+scipy>=1.10.0
+sympy>=1.11.0
+pandas>=2.0.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+networkx>=3.0
+
+# GUI (needed for interface/gui.py)
+PyQt5>=5.15.0
+
+# Web interface (needed for interface/web_app.py)
+Flask>=3.0.0
+flask-cors>=4.0.0
+
+# File I/O
+Pillow>=9.5.0
+xlrd>=2.0.0
+openpyxl>=3.1.0
+
+# Tests
+pytest>=7.4.0

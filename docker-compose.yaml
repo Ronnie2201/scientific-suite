@@ -1,0 +1,21 @@
+services:
+  scientific-suite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: scientific-suite:1.0.0
+    container_name: scientific-suite
+    volumes:
+      # Live-mount your current project directory to edit code seamlessly
+      - .:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    ports:
+      - "5001:5000"  # Port mapping works cleanly when network_mode isn't host
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+      # Change 'Agg' to 'Qt5Agg' when you want Matplotlib windows to pop out via PyQt5
+      - MPLBACKEND=Qt5Agg
+    stdin_open: true
+    tty: true
+    command: python -m interface.web_app
+    restart: unless-stopped
